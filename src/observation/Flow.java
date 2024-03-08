@@ -51,7 +51,9 @@ public class Flow extends Observable {
         List<Point2D.Double> points = sys.calcValues(dp, tmax);
         try (PrintStream out = new PrintStream(new FileOutputStream("fundamental.txt"))) {
             for (Point2D.Double p : points) {
-                out.println(p.x + " " + p.y);
+                if (!Double.isNaN(p.y) && p.y >= 0) {
+                    out.println(p.x + " " + p.y);
+                }
             }
         }
     }

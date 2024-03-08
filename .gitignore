@@ -1,7 +1,6 @@
 nbproject/private/
 build/
 dist/
-*.eps
+*.py
 *.pdf
-*.plt
 *.txt
